@@ -4,6 +4,187 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    YourContract: {
+      address: "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_name",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_surname",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_job",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_desc",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_github",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_linkedin",
+              type: "string",
+            },
+          ],
+          name: "addProfile",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "profiles",
+          outputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "surname",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "jobTitle",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "desc",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "github",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "linkedin",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
+  },
+  11155111: {
+    YourContract: {
+      address: "0xe52C51a8e96E6399bB03cA22De773639637Ef958",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_name",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_surname",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_job",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_desc",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_github",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_linkedin",
+              type: "string",
+            },
+          ],
+          name: "addProfile",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "profiles",
+          outputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "surname",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "jobTitle",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "desc",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "github",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "linkedin",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;

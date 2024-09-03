@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/YourContract.sol": {
+      "content": "//SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\n\ncontract YourContract {\n\n\tstruct profile {\n\t\tstring name;\n\t\tstring surname;\n\t\tstring jobTitle;\n\t\tstring desc;\n\t\tstring github;\n\t\tstring linkedin;\n\t}\n\n\tmapping (address => profile) public profiles; \n\n\tfunction addProfile(string memory _name,string memory _surname,string memory _job,string memory _desc,string memory _github,string memory _linkedin ) public{\n\t\tprofiles[msg.sender].name = _name;\n\t\tprofiles[msg.sender].surname = _surname;\n\t\tprofiles[msg.sender].jobTitle = _job;\n\t\tprofiles[msg.sender].desc = _desc;\n\t\tprofiles[msg.sender].github = _github;\n\t\tprofiles[msg.sender].linkedin = _linkedin;\n\t}\n\n\n\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
