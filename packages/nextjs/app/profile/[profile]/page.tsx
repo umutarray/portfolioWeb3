@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import { useAccount, useClient } from 'wagmi';
 import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { useScaffoldReadContract } from '~~/hooks/scaffold-eth';
 import QRCode from 'qrcode.react';
@@ -12,7 +11,6 @@ type ProfileParams = {
 
 
 const Profile: React.FC<{ params: ProfileParams }> = ({ params }) => {
-    const { address: connectedAddress } = useAccount();
     const { data } = useScaffoldReadContract({
         contractName: "YourContract",
         functionName: "profiles",
@@ -22,7 +20,6 @@ const Profile: React.FC<{ params: ProfileParams }> = ({ params }) => {
     const [url, setUrl] = useState<string>('');
 
     useEffect(() => {
-        // Tarayıcıda mevcut URL'yi al
         setUrl(window.location.href);
     }, []);
 
